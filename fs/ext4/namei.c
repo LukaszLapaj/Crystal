@@ -2426,6 +2426,14 @@ static int ext4_rename(struct inode *old_dir, struct dentry *old_dentry,
 
 	new_inode = new_dentry->d_inode;
 	new_bh = ext4_find_entry(new_dir, &new_dentry->d_name, &new_de);
+<<<<<<< HEAD
+=======
+	if (IS_ERR(new_bh)) {
+		retval = PTR_ERR(new_bh);
+		new_bh = NULL;
+		goto end_rename;
+	}
+>>>>>>> 531cfda... ext4: avoid trying to kfree an ERR_PTR pointer
 	if (new_bh) {
 		if (!new_inode) {
 			brelse(new_bh);
