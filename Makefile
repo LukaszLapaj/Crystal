@@ -375,6 +375,7 @@ KBUILD_CFLAGS := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 -Werror-implicit-function-declaration \
 -Wno-format-security \
 -fno-delete-null-pointer-checks \
+-Wbool-compare \
 -std=gnu89 \
 $(KERNELFLAGS)
 

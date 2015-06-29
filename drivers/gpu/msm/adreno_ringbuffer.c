@@ -213,7 +213,11 @@ err:
  *
  * Load the pm4 ucode from @start at @addr.
  */
+<<<<<<< HEAD
 static inline int adreno_ringbuffer_load_pm4_ucode(struct kgsl_device *device,
+=======
+int adreno_ringbuffer_load_pm4_ucode(struct kgsl_device *device,
+>>>>>>> 73160d2... GCC 6.0 cleanup and addition of missing modules- many thanks to #DespairFactor for showing the way with sha$
 			unsigned int start, unsigned int end, unsigned int addr)
 {
 	struct adreno_device *adreno_dev = ADRENO_DEVICE(device);
@@ -267,7 +271,11 @@ err:
  *
  * Load the pfp ucode from @start at @addr.
  */
+<<<<<<< HEAD
 static inline int adreno_ringbuffer_load_pfp_ucode(struct kgsl_device *device,
+=======
+int adreno_ringbuffer_load_pfp_ucode(struct kgsl_device *device,
+>>>>>>> 73160d2... GCC 6.0 cleanup and addition of missing modules- many thanks to #DespairFactor for showing the way with sha$
 			unsigned int start, unsigned int end, unsigned int addr)
 {
 	struct adreno_device *adreno_dev = ADRENO_DEVICE(device);
@@ -1029,7 +1037,7 @@ done:
  * does additional level parsing and verification above and beyond what KGSL
  * core does
  */
-static inline bool _ringbuffer_verify_ib(struct kgsl_device_private *dev_priv,
+static bool _ringbuffer_verify_ib(struct kgsl_device_private *dev_priv,
 		struct kgsl_ibdesc *ibdesc)
 {
 	struct kgsl_device *device = dev_priv->device;
