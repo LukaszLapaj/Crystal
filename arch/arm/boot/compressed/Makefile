@@ -23,14 +23,7 @@ endif
 
 AFLAGS_head.o += -DTEXT_OFFSET=$(TEXT_OFFSET)
 HEAD	= head.o
-<<<<<<< HEAD
 OBJS	+= misc.o decompress.o
-=======
-OBJS	+= misc.o
-ifeq ($(CONFIG_KERNEL_LZ4),y)
-CFLAGS_decompress.o := -Os
-endif
->>>>>>> 6cc7ed7... Compressed: optimize for Cortex A15
 FONTC	= $(srctree)/drivers/video/console/font_acorn_8x8.c
 
 # string library code (-Os is enforced to keep it much smaller)
