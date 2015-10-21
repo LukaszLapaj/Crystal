@@ -11,6 +11,8 @@
 #include <linux/jbd2.h>
 #include "ext4.h"
 
+#ifdef EXT4FS_DEBUG
+
 static const int nibblemap[] = {4, 3, 3, 2, 3, 2, 2, 1, 3, 2, 2, 1, 2, 1, 1, 0};
 
 unsigned int ext4_count_free(struct buffer_head *map, unsigned int numchars)
@@ -24,4 +26,6 @@ unsigned int ext4_count_free(struct buffer_head *map, unsigned int numchars)
 			nibblemap[(map->b_data[i] >> 4) & 0xf];
 	return sum;
 }
+
+#endif  /*  EXT4FS_DEBUG  */
 
