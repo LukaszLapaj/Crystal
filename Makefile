@@ -245,8 +245,8 @@ CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
 
 HOSTCC       = gcc
 HOSTCXX      = g++
-HOSTCFLAGS   = -O3 -fgcse-las -fgcse-sm -fipa-pta -fivopts -fomit-frame-pointer -frename-registers -ftracer -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -funswitch-loops -fweb -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -std=gnu89
-HOSTCXXFLAGS = -O3 -fgcse-las -fgcse-sm -fipa-pta -fivopts -fomit-frame-pointer -frename-registers -ftracer -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -funswitch-loops -fweb -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -std=gnu89
+HOSTCFLAGS   = -O3 -fgcse-las -fgcse-sm -fipa-pta -fivopts -fomit-frame-pointer -frename-registers -ftracer -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -funswitch-loops -fweb -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -std=gnu89 -pipe
+HOSTCXXFLAGS = -O3 -fgcse-las -fgcse-sm -fipa-pta -fivopts -fomit-frame-pointer -frename-registers -ftracer -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -funswitch-loops -fweb -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -std=gnu89 -pipe
 
 # Decide whether to build built-in, modular, or both.
 # Normally, just do built-in.
@@ -351,7 +351,7 @@ CHECK		= sparse
 
 CHECKFLAGS := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 -Wbitwise -Wno-return-void $(CF)
-KERNELFLAGS = -O3 -DNDEBUG -munaligned-access -fgcse-las -fgcse-lm -fgcse-sm -fipa-sra -fipa-pta -fipa-cp -fipa-cp-clone -fivopts -fomit-frame-pointer -frename-registers -fsection-anchors -ftracer -fsched-spec-load -fforce-addr -ffast-math -fsingle-precision-constant -funswitch-loops -fweb -mcpu=cortex-a15 -mtune=cortex-a15 -marm -mfpu=neon-vfpv4 -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -fgraphite -fgraphite-identity -floop-interchange -floop-strip-mine -floop-block -floop-parallelize-all -floop-flatten -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow
+KERNELFLAGS = -O3 -DNDEBUG -munaligned-access -fgcse-las -fgcse-lm -fgcse-sm -fipa-sra -fipa-pta -fipa-cp -fipa-cp-clone -fivopts -fomit-frame-pointer -frename-registers -fsection-anchors -ftracer -fsched-spec-load -fforce-addr -ffast-math -fsingle-precision-constant -funswitch-loops -fweb -mcpu=cortex-a15 -mtune=cortex-a15 -marm -mfpu=neon-vfpv4 -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -fgraphite -fgraphite-identity -floop-interchange -floop-strip-mine -floop-block -floop-parallelize-all -floop-flatten -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -pipe
 MODFLAGS = -DMODULE $(KERNELFLAGS)
 CFLAGS_MODULE = $(MODFLAGS)
 AFLAGS_MODULE = $(MODFLAGS)
