@@ -80,7 +80,7 @@
 
 #ifdef CONFIG_PWRKEY_SUSPEND
 bool pwrkey_pressed = false;
-bool pwrkey_suspend = false;
+bool pwrkey_suspend = true;
 static int cnt = 0;
 module_param(pwrkey_suspend, bool, 0755);
 #endif
