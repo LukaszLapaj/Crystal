@@ -351,7 +351,7 @@ CHECK		= sparse
 
 CHECKFLAGS := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 -Wbitwise -Wno-return-void $(CF)
-KERNELFLAGS = -O3 -DNDEBUG -munaligned-access -fgcse-las -fgcse-lm -fgcse-sm -fipa-sra -fipa-pta -fipa-cp -fipa-cp-clone -fivopts -fomit-frame-pointer -frename-registers -fsection-anchors -ftracer -fsched-spec-load -fforce-addr -ffast-math -fsingle-precision-constant -funswitch-loops -fweb -mcpu=cortex-a15 -mtune=cortex-a15 -marm -mfpu=neon-vfpv4 -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -fgraphite -fgraphite-identity -floop-interchange -floop-strip-mine -floop-block -floop-parallelize-all -floop-flatten -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -pipe
+KERNELFLAGS = -O3 -DNDEBUG -munaligned-access -floop-nest-optimize -fgcse-las -fgcse-lm -fgcse-sm -fivopts -fomit-frame-pointer -frename-registers -fsection-anchors -fsched-spec-load -fforce-addr -ffast-math -fsingle-precision-constant -funswitch-loops -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon-vfpv4 -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -fgraphite -fgraphite-identity -floop-interchange -floop-strip-mine -floop-block -floop-parallelize-all -floop-flatten -Wno-error=array-bounds -Wno-error=clobbered -Wno-error=maybe-uninitialized -Wno-error=strict-overflow -pipe
 MODFLAGS = -DMODULE $(KERNELFLAGS)
 CFLAGS_MODULE = $(MODFLAGS)
 AFLAGS_MODULE = $(MODFLAGS)
