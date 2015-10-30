@@ -27,7 +27,6 @@
 #define JPEG_DEC_ID 2
 #define UINT32_MAX (0xFFFFFFFFU)
 
-
 void msm_jpeg_q_init(char const *name, struct msm_jpeg_q *q_p)
 {
 	JPEG_DBG("%s:%d] %s\n", __func__, __LINE__, name);
@@ -65,12 +64,7 @@ void *msm_jpeg_q_out(struct msm_jpeg_q *q_p)
 	return data;
 }
 
-<<<<<<< HEAD
-static inline int msm_jpeg_q_in(struct msm_jpeg_q *q_p, void *data)
-=======
-
 int msm_jpeg_q_in(struct msm_jpeg_q *q_p, void *data)
->>>>>>> 73160d2... GCC 6.0 cleanup and addition of missing modules- many thanks to #DespairFactor for showing the way with sha$
 {
 	unsigned long flags;
 
