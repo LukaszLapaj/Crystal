@@ -1081,13 +1081,8 @@ unsigned int kgsl_iommu_sync_lock(struct kgsl_mmu *mmu, unsigned int *cmds)
  *
  * Return - int - number of commands.
  */
-<<<<<<< HEAD
-static inline unsigned int kgsl_iommu_sync_unlock(struct kgsl_mmu *mmu,
-					unsigned int *cmds)
-=======
 
 unsigned int kgsl_iommu_sync_unlock(struct kgsl_mmu *mmu, unsigned int *cmds)
->>>>>>> 73160d2... GCC 6.0 cleanup and addition of missing modules- many thanks to #DespairFactor for showing the way with sha$
 {
 	struct kgsl_device *device = mmu->device;
 	struct adreno_device *adreno_dev = ADRENO_DEVICE(device);
