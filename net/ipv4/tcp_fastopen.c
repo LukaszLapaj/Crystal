@@ -8,7 +8,11 @@
 #include <net/inetpeer.h>
 #include <net/tcp.h>
 
+<<<<<<< HEAD
 int sysctl_tcp_fastopen __read_mostly;
+=======
+int sysctl_tcp_fastopen __read_mostly = TFO_CLIENT_ENABLE;
+>>>>>>> 3b93678483e9486188b731b5a3e4b541fde4d318
 
 struct tcp_fastopen_context __rcu *tcp_fastopen_ctx;
 
