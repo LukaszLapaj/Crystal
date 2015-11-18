@@ -4002,13 +4002,8 @@ static int tcp_fast_parse_options(const struct sk_buff *skb,
 		if (tcp_parse_aligned_timestamp(tp, th))
 			return 1;
 	}
-<<<<<<< HEAD
-	tcp_parse_options(skb, &tp->rx_opt, hvpp, 1);
-	return 1;
-=======
 	tcp_parse_options(skb, &tp->rx_opt, hvpp, 1, NULL);
-	return true;
->>>>>>> 2100c8d... net-tcp: Fast Open base
+	return 1;
 }
 
 #ifdef CONFIG_TCP_MD5SIG
