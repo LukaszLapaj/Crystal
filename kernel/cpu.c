@@ -282,8 +282,8 @@ int __ref cpu_down(unsigned int cpu)
 
 	cpu_maps_update_begin();
 
-	// AP: Keep CPU cores 0 and 3 always on
-	if ((cpu == 0) || (cpu == 3))
+	// AP: Keep CPU cores 0 and 4 always on
+	if ((cpu == 0) || (cpu == 4))
 	{
 		err = -EBUSY;
 		goto out;
